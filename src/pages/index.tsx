@@ -16,7 +16,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.center}>
+        <section className={styles.banner}>
+          <div className={styles.information}>Hi, This is Akihiro.</div>
+        </section>
+        {/* <div className={styles.center}>
           <Image
             className={styles.logo}
             src="/akiJacky.png"
@@ -25,7 +28,7 @@ export default function Home() {
             height={280}
             priority
           />
-        </div>
+        </div> */}
 
         <div className={styles.grid}>
           <a

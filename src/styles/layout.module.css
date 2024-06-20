@@ -113,6 +113,7 @@
   flex-direction: column;
   gap: 4px;
   border: 0.8px solid #63f44c;
+  border-radius: 10px;
 }
 
 .navLink {
@@ -124,4 +125,8 @@
   cursor: pointer;
   background: rgba(0,0,0, 0.08);
   border-radius: 8px;
+}
+
+.contact {
+  font-weight: bold;
 }
