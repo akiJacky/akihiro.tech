@@ -1,10 +1,21 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  /* padding: 6rem; */
+  /* min-height: 100vh; */
+  margin: 0 16px;
+}
+
+.banner{
+  max-width: 50rem;
+  margin: 50px auto;
+  width: 80%;
+  height: 400px;
+  border: 1px solid #63f44c;
+  border-radius: 10px;
+  padding: 30px;
 }
 
 .description {
@@ -42,7 +53,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
+  max-width: 80%;
   width: var(--max-width);
 }
 

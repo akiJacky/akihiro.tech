@@ -36,11 +36,14 @@ function MyApp({ Component, pageProps }: AppProps) {
           </Link>
         </div>
         <div className={styles.headerRight}>
+          <Link href={"/contact"} className={styles.contact}>
+            Contact
+          </Link>
           <button
             onClick={() => setDarkMode(!darkMode)}
             className={styles.themeButton}
           >
-            {darkMode ? "🌝/🌥️" : "🌒/🌞"}
+            {darkMode ? "☀︎" : "◉"}
           </button>
         </div>
       </header>
