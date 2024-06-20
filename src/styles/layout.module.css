@@ -1,0 +1,127 @@
+
+.header {
+  height: 82px;
+  display: flex;
+  width: 100%;
+  padding: 16px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  gap: 8px;
+}
+
+.menu:hover {
+  cursor: pointer;
+}
+
+.menu span {
+  background-color: #bffeb9;
+  width: 25px;
+  height: 1px;
+  display: block;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 8px 16px;
+  color: #bffeb9;
+  border-radius: 8px;
+  background-color: #0D1213;
+  box-shadow:
+    -8px -8px 16px 0px #121718,
+    8px 8px 16px 0px #080D0E;
+  transition: box-shadow .4s ease-in-out;
+}
+
+.hero:hover {
+  background-color: #0D1213;
+  box-shadow:
+    -1px -1px 2px 0px #121718,
+    1px 1px 2px 0px #080D0E;
+  cursor: pointer;
+}
+
+.themeButton {
+  background: #161D1E;
+  color: #bffeb9;
+  height: 40px;
+  padding: 8px 16px;
+  align-items: center;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #0D1213;
+  box-shadow:
+    -8px -8px 16px 0px #121718,
+    8px 8px 16px 0px #080D0E;
+  transition: box-shadow .4s ease-in-out;
+}
+
+.themeButton:hover {
+  background-color: #0D1213;
+  box-shadow:
+    -1px -1px 2px 0px #121718,
+    1px 1px 2px 0px #080D0E;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 300;
+  /* background: rgba(0,0,0,0.1); */
+}
+
+.nav {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  bottom: 0;
+  height: 40%;
+  width: 300px;
+  background: #161D1E;
+  z-index: 999;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 0.8px solid #63f44c;
+}
+
+.navLink {
+  color: #63f44c;
+  padding: 8px 16px;
+}
+
+.navLink:hover {
+  cursor: pointer;
+  background: rgba(0,0,0, 0.08);
+  border-radius: 8px;
+}
