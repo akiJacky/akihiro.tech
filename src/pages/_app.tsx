@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <span />
           </div>
           <Link className={styles.hero} href="/">
-            $ akihironakano.dev
+            $ {darkMode ? "dev" : "bio"}.akihiro.tech
           </Link>
         </div>
         <div className={styles.headerRight}>
