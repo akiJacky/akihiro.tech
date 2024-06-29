@@ -27,11 +27,9 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <h2>
-              Docs <span>-&gt;</span>
+              Works <span>-&gt;</span>
             </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
+            <p>My Job details and technology stack I can provide.</p>
           </a>
 
           <a
@@ -41,11 +39,9 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <h2>
-              Learn <span>-&gt;</span>
+              Contact <span>-&gt;</span>
             </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
+            <p>Let's work together. Please feel free to contact me!</p>
           </a>
 
           <a
@@ -55,11 +51,9 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <h2>
-              Templates <span>-&gt;</span>
+              Articles <span>-&gt;</span>
             </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
+            <p>Mainly my blog, other than that, articles about my past work.</p>
           </a>
 
           <a
@@ -69,12 +63,9 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <h2>
-              Deploy <span>-&gt;</span>
+              Space <span>-&gt;</span>
             </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
+            <p>This is free Space.</p>
           </a>
         </div>
       </main>
