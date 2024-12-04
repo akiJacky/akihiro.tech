@@ -1,7 +1,10 @@
+import BlogRows from "@/components/routes/BlogRows";
+
 const BlogPage = () => {
   return (
-    <div className="about-container">
-      <h1 className="about-title">Blog</h1>
+    <div className="m-8">
+      <h1 className="mb-2">Blog</h1>
+      <BlogRows />
     </div>
   );
 };
