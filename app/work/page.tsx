@@ -1,7 +1,7 @@
 const WorkPage = () => {
   return (
-    <div className="about-container">
-      <h1 className="about-title">Work</h1>
+    <div className="m-8">
+      <h1 className="mb-2">Work</h1>
     </div>
   );
 };
