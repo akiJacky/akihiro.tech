@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import "@/app/globals.css";
+import Link from "next/link";
 
 export function Introduction() {
   return (
@@ -11,17 +12,31 @@ export function Introduction() {
         <p className="text-sm text-muted-foreground">
           Solution Architect, Data Scientist.
           <br />
-          Founder of <span className="underline">ATPrimer</span>. PdM of{" "}
-          <span className="underline">xazoAI</span>.
+          Founder of{" "}
+          <a
+            href="https://atprimer.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            ATPrimer
+          </a>
+          . PdM of <span className="underline">xazoAI</span>.
         </p>
       </div>
       <Separator className="my-4" />
       <div className="flex h-5 items-center space-x-4 text-sm">
-        <div>Blog</div>
+        <Link href="/blog" className="block">
+          Blog
+        </Link>
         <Separator orientation="vertical" />
-        <div>Work</div>
+        <Link href="/work" className="block">
+          Work
+        </Link>
         <Separator orientation="vertical" />
-        <div>Contact</div>
+        <Link href="/contact" className="block">
+          Contact
+        </Link>
       </div>
     </div>
   );
