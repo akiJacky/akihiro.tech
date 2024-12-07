@@ -20,7 +20,7 @@ const Pagination = ({
   totalBlogs,
   onPageChange,
 }: PaginationProps) => {
-  const perPage = 5;
+  const perPage = 8;
   const totalPages = Math.ceil(totalBlogs / perPage);
 
   // 前のページに移動
