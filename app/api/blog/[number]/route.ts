@@ -1,6 +1,8 @@
-// app/api/blog/route.ts
-import { NextResponse } from 'next/server';
+// app/api/blog/[number]/route.ts
+import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
+// ダミーデータ（またはデータベースから取得する処理）を返す
 const blogs = [
   { number: "001", title: "Exploring New Digital Horizons", lastUpdate: "2024-11-10", content: "As the digital landscape continues to evolve, businesses are exploring new opportunities for growth and innovation. Embracing new technologies is essential for staying ahead in a competitive market. This journey toward digital transformation opens up exciting possibilities for entrepreneurs and leaders alike." },
   { number: "002", title: "Innovative Solutions for Tomorrow", lastUpdate: "2024-11-11", content: "Innovation is the key to success in the modern world. By adopting creative solutions, businesses can address the challenges of today while preparing for the uncertainties of tomorrow. Leveraging new technologies and agile strategies will shape the future, bringing efficiency and improved outcomes for organizations across industries." },
@@ -21,13 +23,19 @@ const blogs = [
   { number: "017", title: "Turning Vision Into Reality", lastUpdate: "2024-11-25", content: "Vision without action is merely a dream. The most successful organizations are those that can take a clear vision and transform it into reality. This involves setting clear goals, executing with precision, and remaining focused on the long-term objectives. Turning vision into reality requires determination, collaboration, and a relentless pursuit of excellence." }
 ];
 
+export async function GET(req: NextRequest) {
+  // URLパラメータの `number` を取得
+  const number = req.nextUrl.pathname.split("/").pop();
 
-export async function GET(request: Request) {
-  const url = new URL(request.url);
-  const page = Number(url.searchParams.get("page") || 1);
-  const perPage = 8;
-  const startIndex = (page - 1) * perPage;
-  const selectedBlogs = blogs.slice(startIndex, startIndex + perPage);
+  if (!number) {
+    return NextResponse.json({ error: "Blog number is missing" }, { status: 400 });
+  }
 
-  return NextResponse.json({ blogs: selectedBlogs, total: blogs.length });
+  const blog = blogs.find((blog) => blog.number === number); // ダミーデータから一致するブログを取得
+
+  if (!blog) {
+    return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+  }
+
+  return NextResponse.json(blog);
 }

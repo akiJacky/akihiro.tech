@@ -9,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import Link from "next/link"; // Linkをインポート
 
 interface Blog {
   number: string;
@@ -35,7 +36,10 @@ const BlogRows = ({ blogs }: BlogRowsProps) => {
         {blogs.map((blog) => (
           <TableRow key={blog.number}>
             <TableCell className="font-medium">{blog.number}</TableCell>
-            <TableCell>{blog.title}</TableCell>
+            {/* タイトルにLinkを追加 */}
+            <TableCell>
+              <Link href={`/blog/${blog.number}`}>{blog.title}</Link>
+            </TableCell>
             <TableCell className="text-right">{blog.lastUpdate}</TableCell>
           </TableRow>
         ))}
