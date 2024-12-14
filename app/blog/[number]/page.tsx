@@ -31,7 +31,7 @@ const BlogDetailPage = () => {
     }
   }, [number]);
 
-  if (!blog) return <div>Loading...</div>;
+  if (!blog) return <div className="m-8 text-sm">Loading...</div>;
 
   return (
     <div className="m-8">
