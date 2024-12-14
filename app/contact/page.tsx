@@ -23,6 +23,20 @@ const ContactPage = () => {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
+      <div className="m-2 text-sm">
+        <p>
+          Email:{" "}
+          <a
+            href="mailto://atprimer.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-sky-500"
+          >
+            akihiro@atprimer.com
+          </a>
+        </p>
+        <br />
+      </div>
     </div>
   );
 };
