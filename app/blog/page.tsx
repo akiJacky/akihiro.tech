@@ -4,6 +4,14 @@
 import { useEffect, useState } from "react";
 import BlogRows from "@/components/routes/BlogRows";
 import Pagination from "@/components/routes/Pagination";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
@@ -29,7 +37,19 @@ const BlogPage = () => {
 
   return (
     <div className="m-8">
-      <h1 className="mb-2">Blog</h1>
+      <div className="mb-4">
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Blog</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+      </div>
       <BlogRows blogs={blogs} />
       <div className="my-8">
         <Pagination

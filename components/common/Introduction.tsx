@@ -12,7 +12,7 @@ export function Introduction() {
         <p className="text-sm text-muted-foreground">
           Solution Architect, Data Scientist.
           <br />
-          Founder of{" "}
+          Currently work at{" "}
           <a
             href="https://atprimer.com"
             target="_blank"
@@ -22,6 +22,8 @@ export function Introduction() {
             ATPrimer
           </a>
           . PdM of <span className="underline">xazoAI</span>.
+          <br />
+          Previously studied at Kyoto Univ(BSc, MSc).
         </p>
       </div>
       <Separator className="my-4" />

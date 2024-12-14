@@ -34,7 +34,7 @@ const BlogDetailPage = () => {
   if (!blog) return <div className="m-8 text-sm">Loading...</div>;
 
   return (
-    <div className="m-8">
+    <div className="m-8 max-w-96">
       <h1 className="mb-2 italic">{blog.title}</h1>
       <p className="text-xs text-muted-foreground">
         {new Date(blog.lastUpdate).toLocaleDateString()}
