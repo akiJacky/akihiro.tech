@@ -51,7 +51,7 @@ const BlogRows = ({ blogs }: BlogRowsProps) => {
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell colSpan={3}>Total</TableCell>
+          <TableCell colSpan={4}>Total</TableCell>
         </TableRow>
       </TableFooter>
     </Table>
