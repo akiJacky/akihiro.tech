@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator";
 interface Blog {
   number: string;
   title: string;
+  author: string;
   lastUpdate: string;
   content: string;
 }
