@@ -14,6 +14,7 @@ import Link from "next/link"; // Linkをインポート
 interface Blog {
   number: string;
   title: string;
+  author: string;
   lastUpdate: string;
 }
 
@@ -29,7 +30,8 @@ const BlogRows = ({ blogs }: BlogRowsProps) => {
         <TableRow>
           <TableHead className="w-[100px]">No.</TableHead>
           <TableHead>Title</TableHead>
-          <TableHead className="text-right">Update time</TableHead>
+          <TableHead className="w-[10px]">Author</TableHead>
+          <TableHead className="text-right">Date</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -39,6 +41,9 @@ const BlogRows = ({ blogs }: BlogRowsProps) => {
             {/* タイトルにLinkを追加 */}
             <TableCell>
               <Link href={`/blog/${blog.number}`}>{blog.title}</Link>
+            </TableCell>
+            <TableCell className="font-medium text-center">
+              {blog.author}
             </TableCell>
             <TableCell className="text-right">{blog.lastUpdate}</TableCell>
           </TableRow>
