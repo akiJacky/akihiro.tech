@@ -37,9 +37,13 @@ const BlogDetailPage = () => {
   return (
     <div className="m-8 max-w-96">
       <h1 className="mb-2 italic">{blog.title}</h1>
-      <p className="text-xs text-muted-foreground">
-        {new Date(blog.lastUpdate).toLocaleDateString()}
-      </p>
+      <div className="h-3 items-center space-x-2 text-sm flex">
+        <p className="text-xs text-muted-foreground">
+          {new Date(blog.lastUpdate).toLocaleDateString()}
+        </p>
+        <Separator orientation="vertical" />
+        <p className="text-xs text-muted-foreground">Author: {blog.author}</p>
+      </div>
       <Separator className="my-4" />
       <div className="text-sm my-4">{blog.content}</div>
     </div>
