@@ -2,7 +2,7 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { IS_GATAG, GA_TAG_ID, pageview } from "@/lib/gtag";
 
 const GoogleAnalytics = () => {
@@ -37,4 +37,11 @@ const GoogleAnalytics = () => {
   );
 };
 
-export default GoogleAnalytics;
+// Suspenseでラップ
+const GoogleAnalyticsWithSuspense = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <GoogleAnalytics />
+  </Suspense>
+);
+
+export default GoogleAnalyticsWithSuspense;
