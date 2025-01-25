@@ -21,7 +21,7 @@ export function Introduction() {
           >
             ATPrimer
           </a>
-          . PdM of <span className="underline">xazoAI</span>.
+          . PdM at <span className="underline">Xazo</span>.
           <br />
           Previously studied at Kyoto Univ(BSc, MSc).
         </p>
