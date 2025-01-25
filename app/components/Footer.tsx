@@ -26,7 +26,7 @@ export function Footer() {
           <FaLinkedin className="text-base hover:text-blue-700" />
         </a>
       </div>
-      <p>©2024 akiJacky All rights reserved.</p>
+      <p>©2025 akiJacky All rights reserved.</p>
     </footer>
   );
 }
